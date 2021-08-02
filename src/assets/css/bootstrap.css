@@ -207,7 +207,6 @@ figure {
 }
 
 img {
-  vertical-align: middle;
   border-style: none;
   display: block;
   margin-left: auto;
@@ -9095,6 +9094,28 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto;
   padding: 10px 0px 10px;
   margin-top: 15px;
+}
+
+.center {
+  color: white;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50%;
+  width: 90%;
+  height: 50px;
+  position: absolute;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
