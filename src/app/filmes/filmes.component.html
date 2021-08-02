@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="rowHeader">
+    <div class="col-12">
+      <div class="float-left">
+        <h4>BlockBuster Filmes</h4>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-5" id="listaFilmes">
+      <h5>Selecione o filme desejado:</h5>
+      <br>
+      <ul>
+        <li *ngFor="let filme of filmes" (click)="onSelect(filme)">
+          {{ filme.nome }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-5" *ngIf="selectedFilme">
+      <div id="infoFilmes">
+        <h5>Detalhes de {{ selectedFilme.nome | uppercase }} </h5>
+        <div id="linhaDetalhe">
+          <label for="filme-ano">Ano:</label>
+          <input id="filme-ano" [(ngModel)]="selectedFilme.ano">
+        </div>
+        <div id="linhaDetalhe">
+          <label for="filme-diretor">Diretor:</label>
+          <input id="filme-diretor" [(ngModel)]="selectedFilme.diretor">
+        </div>
+        <div id="linhaDetalhe">
+          <label for="filme-genero">Genêro:</label>
+          <input id="filme-genero" [(ngModel)]="selectedFilme.genero">
+        </div>
+        <div id="linhaDetalhe">
+          <label for="filme-descricao">Sinópse:</label>
+          <br>
+          <textarea cols="40" rows="5" id="filme-descricao" [(ngModel)]="selectedFilme.descricao"></textarea>
+        </div>
+      </div>
+      <div id="imagemFilmes">
+        <img src="{{ selectedFilme.poster }}" alt="{{ selectedFilme.nome }}">
+      </div>
+    </div>
+  </div>
+</div>
+
